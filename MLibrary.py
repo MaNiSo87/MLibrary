@@ -1,4 +1,4 @@
-
+import matplotlib.pyplot as plt
 import torch
 
 # Shuffle Tensors
@@ -7,11 +7,7 @@ def shuffle(tens):
   return tens[idx]
 
 # Plot Train, Test and Preditction data
-def plot_predictions(train_data=X_train,
-                     train_labels=y_train,
-                     test_data=X_test,
-                     test_labels=y_test,
-                     predictions=None):
+def plot_predictions(train_data, train_labels, test_data, test_labels, predictions=None):
     plt.figure(figsize=(10, 7))
 
     plt.scatter(train_data, train_labels, c="b", s=4, label="Training data")
