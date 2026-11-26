@@ -7,7 +7,7 @@ def shuffle(tens):
   return tens[idx]
 
 # Plot Train, Test and Preditction data
-def plot_predictions(train_data, train_labels, test_data, test_labels, predictions=None):
+def plot_data(train_data, train_labels, test_data, test_labels, predictions=None):
     plt.figure(figsize=(10, 7))
 
     plt.scatter(train_data, train_labels, c="b", s=4, label="Training data")
