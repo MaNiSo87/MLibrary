@@ -18,3 +18,8 @@ def plot_data(train_data, train_labels, test_data, test_labels, predictions=None
       plt.scatter(test_data, predictions, c="r", s=4, label="Predictions")
 
     plt.legend(prop={"size": 14});
+
+# Measuring the accuracy of the model
+def accuracy(y_pred, y_test):
+  return ((y_pred == y_test).float().mean() * 100).item()
+  
