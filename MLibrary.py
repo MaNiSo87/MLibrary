@@ -22,6 +22,5 @@ def plot_data(train_data, train_labels, test_data, test_labels, predictions=None
 # Measuring the accuracy of the model
 def accuracy(y_pred, y_test):
   y = abs(y_pred - y_test)
- torch.sum(y)
- return y/len(y_pred)*100
+ return torch.sum(y)/len(y_pred)*100
   
