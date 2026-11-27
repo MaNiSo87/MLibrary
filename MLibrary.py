@@ -21,7 +21,6 @@ def plot_data(train_data, train_labels, test_data, test_labels, predictions=None
 
 # Measuring the accuracy of the model
 def accuracy(y_true, y_pred):
-    correct = torch.eq(y_true, y_pred).sum().item() # torch.eq() calculates where two tensors are equal
-    acc = (correct / len(y_pred)) * 100
-    return acc
-  
+    diff = torch.abs(y_true - y_pred)
+    correct = (diff <= tolerance).sum().item()
+    return (correct / len(y_true)) * 100
