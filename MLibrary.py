@@ -20,7 +20,3 @@ def plot_data(train_data, train_labels, test_data, test_labels, predictions=None
     plt.legend(prop={"size": 14});
 
 # Measuring the accuracy of the model
-def accuracy(y_true, y_pred):
-    diff = torch.abs(y_true - y_pred)
-    correct = (diff).sum().item()
-    return (correct / len(y_true)) * 100
